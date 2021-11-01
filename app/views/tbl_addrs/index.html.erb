@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Contact List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Last</th>
+      <th>First</th>
+      <th>State</th>
+      <th>City</th>
+      <th>Zip</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tbl_addrs.each do |tbl_addr| %>
+      <tr>
+        <td><%= tbl_addr.last_name %></td>
+        <td><%= tbl_addr.first_name %></td>
+        <td><%= tbl_addr.state %></td>
+        <td><%= tbl_addr.city %></td>
+        <td><%= tbl_addr.zip %></td>
+        <td><%= tbl_addr.phone %></td>
+        <td><%= tbl_addr.email %></td>
+        <td><%= link_to 'Show', tbl_addr %></td>
+        <td><%= link_to 'Edit', edit_tbl_addr_path(tbl_addr) %></td>
+        <td><%= link_to 'Destroy', tbl_addr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contact', new_tbl_addr_path %>

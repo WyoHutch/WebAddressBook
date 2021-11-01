@@ -1,0 +1,2 @@
+class TblAddr < ApplicationRecord
+end

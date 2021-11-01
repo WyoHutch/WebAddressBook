@@ -1,13 +1,13 @@
 <h2 id="headLogo">Web-based Address Book for Breeze</h2>
     <div class="links_line">
       <div class="nav-link">
-        <a href="index.html">Home</a>
+        <%= link_to 'Home', root_path%>
       </div>
       <div class="nav-link">
         <a href="Login.html">Login</a>
       </div>
       <div class="nav-link">
-        <a href="List.html">List</a>
+        <%= link_to "Contacts", tbl_addrs_path%>
       </div>
       <div class="nav-link">
         <a href="Search.html">Search</a>
