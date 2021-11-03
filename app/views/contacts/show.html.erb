@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p style="font-family: Arial; font-size: 20px;">
+  <%= @contact.last_name %>, 
+  <%= @contact.first_name %>
+</p>
+
+<p>
+  <%= @contact.city %>, 
+  <%= @contact.state %>
+  <%= @contact.zip_code %>
+</p>
+
+<p style="margin: 24px;">
+  <div>
+    <strong style="color: purple;">Phone:</strong>
+    <%= @contact.phone %>
+  </div>
+  <div>
+    <strong style="color: blue;">Email:</strong>
+    <%= @contact.email %>
+  </div>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'List', contacts_path %>

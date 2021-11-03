@@ -1,3 +1,18 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+#headLogo {
+  font-family: "Times New Roman", Times, serif;
+  background-color: aqua;
+  margin-bottom: 2px;
+}
+.links_line {
+  display: flex;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: bisque;
+  :hover {
+    font-weight: bolder;
+    color: green;
+  }
+}

@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_01_213757) do
+ActiveRecord::Schema.define(version: 2021_11_02_033753) do
 
-  create_table "tbl_addrs", force: :cascade do |t|
+  create_table "contacts", force: :cascade do |t|
     t.string "last_name"
     t.string "first_name"
     t.string "state"
     t.string "city"
-    t.integer "zip"
+    t.integer "zip_code"
     t.string "phone"
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
