@@ -1,15 +1,34 @@
 <h2 id="headLogo">Web-based Address Book for Breeze</h2>
   <div class="links_line">
+
     <div class="nav-link">
-      <%= link_to 'Home', root_path%>
+      <%= link_to 'Home', root_path %>
     </div>
-    <div class="nav-link">
-      <a href="Login.html">Login</a>
-    </div>
+
+    <% if user_signed_in? %>
+
+      <div class="nav-link">
+        <%= link_to "Edit User", edit_user_registration_path %>
+      </div>
+
+      <div class="nav-link">
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+      </div>
+
+    <% else %>
+
+      <div class="nav-link">
+        <%= link_to "Create User", new_user_registration_path %>
+      </div>
+
+      <div class="nav-link">
+        <%= link_to "Login", new_user_session_path %>
+      </div>
+
+      <% end %>
+    
     <div class="nav-link">
       <%= link_to "Contacts", contacts_path%>
     </div>
-    <div class="nav-link">
-      <a href="Search.html">Search</a>
-    </div>
+
   </div>

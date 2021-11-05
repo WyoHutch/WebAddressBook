@@ -1,7 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Contacts</h1>
-
 <table>
   <thead>
     <tr>
@@ -24,7 +22,7 @@
   </thead>
 
   <tbody>
-    <% @contacts.each do |contact| %>
+    <% @contacts.order(:last_name).each do |contact| %>
       <tr>
         <td><%= contact.last_name %></td>
         <td><%= contact.first_name %></td>
